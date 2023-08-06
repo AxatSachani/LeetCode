@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select p.firstname as firstName , p.lastname lastName, COALESCE( a.city,null)  AS city, COALESCE( a.state,null)  AS state from Person p left outer join Address a on p.personId = a.personid

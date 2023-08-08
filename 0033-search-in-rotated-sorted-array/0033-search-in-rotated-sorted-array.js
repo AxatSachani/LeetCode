@@ -4,10 +4,25 @@
  * @return {number}
  */
 var search = function (nums, target) {
-    let index = -1
-    for (let i = 0; i < nums.length; i++) {
-        const element = nums[i];
-        if (nums[i] == target) index = i
+    let start = 0, end = nums.length - 1
+    while (start <= end) {
+        let mid = Math.floor((start + end) / 2);
+
+        if (nums[mid] == target)
+            return mid
+        if (nums[start] <= nums[mid]) {
+            if (nums[start] <= target && target < nums[mid]) {
+                end = mid - 1
+            } else {
+                start = mid + 1
+            }
+        } else {
+            if (nums[mid] < target && target <= nums[end]) {
+                start = mid + 1
+            } else {
+                end = mid - 1
+            }
+        }
     }
-    return index
+    return -1;
 };

@@ -11,8 +11,6 @@ var minimumCost = function (cost) {
         totalCostToPurchase += temp[0]
         totalCostToPurchase += temp[1]
     }
-    for (let j = timeOfPurchase * 3; j < cost.length; j++) {
-        totalCostToPurchase += cost[j]
-    }
+    cost.splice(timeOfPurchase * 3, cost.length).forEach(d => totalCostToPurchase += d)
     return totalCostToPurchase
 };

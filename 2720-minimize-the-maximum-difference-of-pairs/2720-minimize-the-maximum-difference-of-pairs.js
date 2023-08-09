@@ -6,7 +6,7 @@
 var minimizeMax = function (nums, p) {
     nums.sort((a, b) => a - b);
 
-    const isContainEnough = ({ diff }) => {
+    const isContainEnough = (diff) => {
         let c = 0;
         let i = 0;
         while (i < nums.length - 1 && c < p) {
@@ -25,7 +25,7 @@ var minimizeMax = function (nums, p) {
 
     while (left < right) {
         let mid = Math.floor((left + right) / 2);
-        if (isContainEnough({ diff: mid })) {
+        if (isContainEnough(mid)) {
             right = mid;
         } else {
             left = mid + 1;

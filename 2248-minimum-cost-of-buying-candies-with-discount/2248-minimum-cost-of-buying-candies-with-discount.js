@@ -4,7 +4,7 @@
  */
 var minimumCost = function (cost) {
     cost.sort((a, b) => b - a)
-    const timeOfPurchase = Math.floor(cost.length / 3)
+    let timeOfPurchase = Math.floor(cost.length / 3)
     let totalCostToPurchase = 0
     for (let i = 0; i < timeOfPurchase; i++) {
         const temp = cost.slice((i * 3), ((i * 3) + 3));

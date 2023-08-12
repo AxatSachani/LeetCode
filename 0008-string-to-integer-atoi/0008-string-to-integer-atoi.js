@@ -13,8 +13,7 @@ var myAtoi = function (s) {
         i++
     }
     result = result * sign
-    result = Math.max(Math.min(result, Math.pow(2, 31) - 1), -Math.pow(2, 31));  // Check for integer overflow
-    return result;
+    return Math.max(Math.min(result, Math.pow(2, 31) - 1), -Math.pow(2, 31));  // Check for integer overflow
 };
 
 

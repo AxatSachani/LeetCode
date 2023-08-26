@@ -3,7 +3,6 @@
  * @return {number}
  */
 var findLongestChain = function (pairs) {
-    if (pairs.length == 1) return 1
     pairs.sort(([a, b], [c, d]) => b - d);
     let chain = 1, pair = pairs[0]
     for (let i = 1; i < pairs.length; i++) {

@@ -13,6 +13,5 @@ var combinationSum4 = function (nums, target) {
             }
         }
     }
-
     return result[target];
 };

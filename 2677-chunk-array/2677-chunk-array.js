@@ -4,10 +4,9 @@
  * @return {Array}
  */
 var chunk = function (arr, size) {
-    const result = []
-    while (arr.length >= size) {
-        result.push(arr.splice(0, size))
+    let ans = [];
+    while (arr.length > 0) {
+        ans.push(arr.splice(0, size));
     }
-    if (arr.length > 0) result.push(arr.splice(0, arr.length))
-    return result
+    return ans;
 };

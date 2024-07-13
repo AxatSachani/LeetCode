@@ -6,16 +6,13 @@ var createCounter = function (init) {
     let current = init
     return {
         increment: () => {
-            current++
-            return current
+            return ++current
         },
         reset: () => {
-            current = init
-            return current
+            return (current = init)
         },
         decrement: () => {
-            current--
-            return current
+            return --current
         }
     }
 };

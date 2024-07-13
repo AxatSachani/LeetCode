@@ -5,10 +5,10 @@
  */
 var debounce = function (fn, t) {
     let timer;
-    return function (...args) {
+    return (...args) => {
         clearTimeout(timer);
-        timer = setTimeout(() => fn(...args), t)
-    }
+        timer = setTimeout(() => fn(...args), t);
+    };
 };
 
 /**

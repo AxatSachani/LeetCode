@@ -5,15 +5,10 @@
 function memoize(fn) {
     const cache = new Map()
     return function (...args) {
-        const key = args.map(arg => String(arg)).join(',');
-
-        if (cache.has(key)) {
-            return cache.get(key);
-        } else {
-            const result = fn.apply(this, args)
-            cache.set(key, result);
-            return result;
-        }
+        const key = args.join(',');
+        return cache.has(key)
+            ? cache.get(key)
+            : cache.set(key, fn.apply(this, args)).get(key)
     }
 }
 

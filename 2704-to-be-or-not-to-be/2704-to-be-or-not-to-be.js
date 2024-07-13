@@ -9,9 +9,10 @@ var expect = function (val) {
             else throw new Error("Not Equal")
         },
         notToBe: (testCase) => {
-            if (val === testCase) throw new Error("Equal")
-            else return true
+            if (val !== testCase) return true
+            else throw new Error("Equal")
         }
+
     }
 };
 

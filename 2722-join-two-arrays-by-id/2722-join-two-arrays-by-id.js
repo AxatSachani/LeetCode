@@ -5,7 +5,6 @@
  */
 var join = function (arr1, arr2) {
     const map = new Map();
-
     arr1.forEach(item => {
         map.set(item.id, item);
     });

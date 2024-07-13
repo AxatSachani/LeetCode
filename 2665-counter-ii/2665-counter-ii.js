@@ -6,7 +6,7 @@ var createCounter = function (init) {
     let current = init
     return {
         increment: () => {
-            return ++current
+            return (++current)
         },
         reset: () => {
             return (current = init)

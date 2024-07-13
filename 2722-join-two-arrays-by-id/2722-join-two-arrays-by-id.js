@@ -18,5 +18,5 @@ var join = function (arr1, arr2) {
     });
 
     // Convert map values back to array and return
-    return Array.from(map.values());
+    return Array.from(map.values()).sort((a, b) => a.id - b.id);
 };

@@ -2,20 +2,15 @@
  * @param {Function} fn
  * @return {Function}
  */
-function once(fn) {
-    let isCalled = false;
-    let result;
-
-    return (...args) => {
-        if (!isCalled) {
-            result = fn(...args);
-            isCalled = true;
-            return result;
-        } else {
-            return undefined;
+var once = function (fn) {
+    let isUsed = false
+    return function (...args) {
+        if (!isUsed) {
+            isUsed = true;
+            return fn(...args);
         }
-    };
-}
+    }
+};
 
 /**
  * let fn = (a,b,c) => (a + b + c)

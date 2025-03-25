@@ -13,4 +13,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [3430-count-days-without-meetings](https://github.com/AxatSachani/LeetCode/tree/master/3430-count-days-without-meetings) |
 | [3657-check-if-grid-can-be-cut-into-sections](https://github.com/AxatSachani/LeetCode/tree/master/3657-check-if-grid-can-be-cut-into-sections) |
+## Database
+|  |
+| ------- |
+| [0627-swap-salary](https://github.com/AxatSachani/LeetCode/tree/master/0627-swap-salary) |
 <!---LeetCode Topics End-->
